@@ -17,7 +17,8 @@ class Footer extends React.Component {
           rel="noopener" 
           rel="noreferrer"
         >
-          <img src="public/img/soundcloud.png" className="soundcloud"/>
+          <i className="fa fa-soundcloud"></i>
+          <span className="text">SOUNDCLOUD</span>
         </a>
         <div className="volume">
           <progress

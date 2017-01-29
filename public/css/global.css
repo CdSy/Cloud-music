@@ -6,18 +6,28 @@
 body{
   margin: 0;
   font-family: 'Exo 2', sans-serif;
-}
-
-.player-wrapper{
-  position: relative;
+  background: url('./../img/cloud.jpg');
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
+.player-wrapper{
+  position: relative;
+  left: 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.6) 3px 6px 12px 1px;
+  -o-transform: translate(-50%, 40%);
+  -webkit-transform: translate(-50%, 40%); 
+  -ms-transform: translate(-50%, 40%);
+  transform: translate(-50%, 40%);
+}
+
 .search {
   position: relative;
-  padding: 5px 5px;
+  padding: 5px 0;
 }
 
 .search div, .search input {
@@ -26,7 +36,6 @@ body{
 
 .search input {
   border: none;
-  border-radius: 3px;
   border-bottom: 2px solid rgb(243, 139, 114);
   outline: none;
   background: rgba(255, 255, 255, 0.8);
@@ -40,7 +49,7 @@ body{
 }
 
 .search input:focus + .after {
-  width: 441px;
+  width: 450px;
 }
 
 .search input:focus {
@@ -223,7 +232,7 @@ body{
   bottom: 0px;
   width: 100%;
   height: 50px;
-  background: rgba(0, 0, 0, 0,3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .footer .volume {
@@ -316,15 +325,58 @@ body{
   height: 25px;
   width: auto;
 }
-.footer .soundcloud{
+.footer .soundcloud {
   width: 40px;
   height: auto;
   margin-top: 14px;
   margin-left: 14px;
+  -moz-transition: transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+
+.footer .soundcloud:hover {
+  -o-transform: scale(1.4);
+  -webkit-transform: scale(1.4); 
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
 }
 
 .footer .link {
   display: inline-block;
+  padding-left: 18px;
+  padding-top: 6px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+}
+
+.footer .link .fa {
+  font-size: 30px;
+  color: #fff;
+  -moz-transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.footer .link:hover .fa {
+  color: #ff6400;
+}
+
+.footer .link:hover .text {
+  color: #ff6400;
+}
+
+.footer .link .text {
+  display: block;
+  font-size: 8px;
+  line-height: 1px;
+  -moz-transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .footer .player_track-list {
@@ -333,10 +385,10 @@ body{
   left: 450px;
   width: 0;
   height: 450px;
-  border: 2px solid #333;
-  border-left: none;
+  border: none;
   border-radius: 0 4px 4px 0;
   background-color: rgba(0, 0, 0, 0.55);
+  box-shadow: rgba(0, 0, 0, 0.6) 3px 6px 12px 1px;
   overflow-y: auto;
   overflow-x: hidden;
   -moz-transition: width 0.2s ease;
@@ -347,6 +399,8 @@ body{
 
 .footer .player_track-list.active {
   width: 350px;
+  border: 2px solid #333;
+  border-left: none;
 }
 
 .footer .player_track-list .track {
