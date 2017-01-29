@@ -66,7 +66,7 @@ class AppContainer extends React.Component {
   }
 
   getTrackList (value) {
-    Axios.get(`https://api.soundcloud.com/tracks?client_id=${this.client_id}&q=${value}`)
+    Axios.get(`https://api.soundcloud.com/tracks?client_id=${this.client_id}&q=${value}&limit=50`)
         .then((response) => {
             console.log(response.data);
             this.setState({tracks: response.data});
