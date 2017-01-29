@@ -134,6 +134,7 @@ body{
 }
 
 .player .player_main {
+  width: 262px;
   border: 1px solid rgb(243, 139, 114);
   padding: 5px 10px;
 }
@@ -400,7 +401,7 @@ body{
 
 .footer .player_track-list .title {
   display: inline-block;
-  width: 275px;
+  width: 260px;
   height: 36px;
   padding-right: 3px;
   overflow: hidden;
@@ -420,6 +421,10 @@ body{
 
 .footer .player_track-list .track:hover {
   background: rgba(0, 0, 0, 0.1);
+}
+
+.fa {
+  cursor: pointer;
 }
 
 @keyframes rotate {
