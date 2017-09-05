@@ -227,8 +227,8 @@ class AppContainer extends React.Component {
   }
 
   deleteTrack(event, index) {
-    event.preventDefault;
-    event.stopPropagation;
+    event.preventDefault();
+    event.stopPropagation();
 
     const state = this.state.tracks.slice(0);
 
